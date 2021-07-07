@@ -7,11 +7,11 @@ require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+const connection = require('./model');
 
 app.use('/',require('./routes/api'));
 app.use('/course',require('./routes/course')); 
 app.use(express.static('./public'));
-const connection = require('./model');
 
 
 const  port = process.env.PORT;
