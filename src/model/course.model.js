@@ -8,6 +8,11 @@ var CourseSchema =  new mongoose.Schema({
     courseId:{type:String},
     courseDuration:{type:String},
     courseFee:{type:String},
+    courseSubjects:[{
+        subjectName:{type:String},
+        subjectSem:{type:String},
+        subjectStatus:{type:Boolean}
+    }]
 });
 
 mongoose.model("Course",CourseSchema);
